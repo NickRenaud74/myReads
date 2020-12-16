@@ -7,15 +7,14 @@ import { Route } from 'react-router-dom';
 
 class BooksApp extends React.Component {
   state = {
-    books: []
+    books: [],
   }
 
   componentDidMount() {
     BooksAPI.getAll()
       .then(books => {
         this.setState({ books: books })
-      }
-      )
+      })
   }
 
   sortShelf = shelf => {
@@ -45,6 +44,7 @@ class BooksApp extends React.Component {
         < Route path='/search' render={() => (
           < SearchBooks
             onMove={this.handleMove}
+            books={this.state.books}
           />
         )} />
 

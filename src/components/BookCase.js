@@ -1,5 +1,5 @@
 import React from 'react';
-import Bookshelf from './Bookshelf';
+import Bookshelf from './BookShelf';
 import { Link } from 'react-router-dom'
 
 function BookCase(props) {
